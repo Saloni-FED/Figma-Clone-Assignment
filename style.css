@@ -209,7 +209,7 @@ nav ul li {
   height: 5rem;
 }
 
-/* Optional: Adjust spacing between items */
+/*  Adjust spacing between items */
 .left_arrow {
   margin-top: 2rem;
 }
@@ -344,7 +344,6 @@ gap: 0px; */
 
 /* Footer section */
 
-/* Base styles */
 footer {
   width: 100%;
   background-color: #000000;
@@ -385,17 +384,17 @@ footer p {
 /* Media queries for small devices */
 @media only screen and (max-width: 767px) {
   footer {
-    padding-bottom: 5px; /* Adjust padding for smaller devices */
+    padding-bottom: 5px; 
   }
   .footer_img img {
-    padding-top: 10px; /* Adjust padding for smaller devices */
+    padding-top: 10px;
   }
   .line {
     margin-top: 10px;
   }
   footer p {
-    font-size: 10px; /* Adjust font size for smaller devices */
-    line-height: 16px; /* Adjust line height for smaller devices */
-    margin: 10px auto; /* Adjust margin for smaller devices */
+    font-size: 10px; 
+    line-height: 16px; 
+    margin: 10px auto;
   }
 }
