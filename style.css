@@ -87,9 +87,9 @@ nav ul li {
     display: none;
   }
   nav ul {
-    display:none;
+    display: none;
   }
-  #check:checked ~ nav ul  {
+  #check:checked ~ nav ul {
     position: absolute;
     top: 100%;
     left: 0;
@@ -100,10 +100,10 @@ nav ul li {
     flex-direction: column;
     gap: 10px;
     padding: 1rem 5%;
-    display:block;
+    display: block;
   }
-  #check:checked ~ nav ul{
-    display:block
+  #check:checked ~ nav ul {
+    display: block;
   }
   nav #logo_menu {
     justify-content: space-between;
@@ -144,6 +144,14 @@ nav ul li {
   width: 100%;
   text-align: center;
   padding-top: 0.5rem;
+}
+
+/* Linear gradient  */
+#ChainTech {
+  background-image: linear-gradient(270deg, #00ffa7 0%, #ffff00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /*  styles for responsiveness */
