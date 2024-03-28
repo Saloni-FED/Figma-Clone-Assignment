@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --text: #fff;
+  --light_green: #00ffa7;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  /* border: 2px solid green; */
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: black;
+}
+/* Menu */
+nav #logo_menu {
+  display: flex;
+}
+.menu_icon .bx {
+  color: white;
+  font-size: 3rem;
+}
+.menu_icon {
+  display: none;
+  cursor: pointer;
+}
+nav ul {
+  color: white;
+  display: flex;
+  gap: 30px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* display: none; */
+}
+nav ul li:first-child {
+  color: var(--light_green);
+}
+
+nav ul li {
+  cursor: pointer;
+}
+
+/* Breakpoints for responsive navbar */
+@media (max-width: 993px) {
+  nav {
+    padding: 1rem 5%;
+  }
+}
+@media (max-width: 768px) {
+  .menu_icon {
+    display: block;
+  }
+  nav ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    height: fit-content;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem 5%;
+  }
+  nav #logo_menu {
+    justify-content: space-between;
+    width: 100%;
+  }
+  nav ul {
+    backdrop-filter: blur(50px);
+  }
+}
+
+/* Mian content */
+#content {
+  background: black;
+  padding: 5rem 0px;
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 988px;
+  height: auto;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container h1 {
+  margin-top: 2.5rem;
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 7rem;
+  letter-spacing: 11%;
+}
+
+.para {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+/*  styles for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  .container h1 {
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 2.5rem;
+  }
+
+  .para {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Card Section css */
+
+#card {
+  width: 100%;
+  /* background-color: pink; */
+  padding: 3rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.card_container {
+  width: 80%;
+  border: 1px solid blue;
+  margin: 0 auto;
+}
+.service_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service_heading h2 {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 70.7px;
+  text-align: left;
+}
+
+.service_heading p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.45px;
+  text-align: left;
+}
+
+.arrows {
+  display: flex;
+  align-items: start;
+  height: 5rem;
+}
+
+/* Optional: Adjust spacing between items */
+.left_arrow {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .arrows {
+    display: none;
+  }
+  .service_heading h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 2rem;
+    text-align: left;
+  }
+}
+.main_card {
+  padding: 1rem 0;
+}
+
+/* width: 355px;
+height: 499px;
+left: -3px;
+gap: 0px; */
+
+.main_card .one {
+  width: 293px;
+  height: 402px;
+  top: 206px;
+  left: 351px;
+  gap: 0px;
+  border-radius: 20px 20px;
+  border: 3px 0px 0px 0px;
+  background: #2bff8a;
+  opacity: 15%;
+  border: 3px solid #000000;
+}
+.main_card .one .circle_head h3,
+.main_card .one .circle_head img {
+  opacity: 0.8; /* Adjust opacity as needed */
+}
