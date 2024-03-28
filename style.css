@@ -40,9 +40,6 @@ nav #logo_menu {
   display: none;
   cursor: pointer;
 }
-#close{
-  display:none;
-}
 nav ul {
   color: white;
   display: flex;
@@ -63,8 +60,12 @@ nav ul li:first-child {
 nav ul li {
   cursor: pointer;
 }
-#check{
-  display:none;
+
+#close-icon {
+  display: none;
+}
+#check {
+  display: none;
 }
 /* Breakpoints for responsive navbar */
 @media (max-width: 993px) {
@@ -76,21 +77,33 @@ nav ul li {
   .menu_icon {
     display: block;
   }
-  
-  .close{
-    display:none
+  #check:checked ~ .icons #menu-icon {
+    display: none;
   }
-  #check
+  #check:checked ~ .icons #close-icon {
+    display: block;
+  }
+  #close-icon {
+    display: none;
+  }
   nav ul {
+    display:none;
+  }
+  #check:checked ~ nav ul  {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: black;
+    height: 100%;
+    background-color: white;
     height: fit-content;
     flex-direction: column;
     gap: 10px;
     padding: 1rem 5%;
+    display:block;
+  }
+  #check:checked ~ nav ul{
+    display:block
   }
   nav #logo_menu {
     justify-content: space-between;
@@ -326,7 +339,6 @@ gap: 0px; */
 /* Base styles */
 footer {
   width: 100%;
-  height:266px;
   background-color: #000000;
   padding-bottom: 10px;
 }
@@ -335,7 +347,7 @@ footer {
   justify-content: center;
 }
 .footer_img img {
-  height: auto; 
+  height: auto;
   padding-top: 68px;
 }
 .line {
@@ -343,21 +355,21 @@ footer {
   margin-top: 40px;
 }
 .footer_line {
-  width:1122.02px;
+  width: 1122.02px;
   max-width: 100%;
   height: 0px;
   border: 1px solid #5e5e5e;
   margin: 40px auto;
 }
 footer p {
-  margin-top:30px;
+  margin-top: 30px;
   max-width: 100%;
-  margin: 20px auto; 
-  padding: 0 10px; 
+  margin: 20px auto;
+  padding: 0 10px;
   font-family: "Poppins";
-  font-size: 12px; 
+  font-size: 12px;
   font-weight: 500;
-  line-height: 20px; 
+  line-height: 20px;
   text-align: center;
   color: #98a6ac;
 }
@@ -371,7 +383,7 @@ footer p {
     padding-top: 10px; /* Adjust padding for smaller devices */
   }
   .line {
-    margin-top: 10px; 
+    margin-top: 10px;
   }
   footer p {
     font-size: 10px; /* Adjust font size for smaller devices */
