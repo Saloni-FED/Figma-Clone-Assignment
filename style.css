@@ -40,6 +40,9 @@ nav #logo_menu {
   display: none;
   cursor: pointer;
 }
+#close{
+  display:none;
+}
 nav ul {
   color: white;
   display: flex;
@@ -60,7 +63,9 @@ nav ul li:first-child {
 nav ul li {
   cursor: pointer;
 }
-
+#check{
+  display:none;
+}
 /* Breakpoints for responsive navbar */
 @media (max-width: 993px) {
   nav {
@@ -71,6 +76,11 @@ nav ul li {
   .menu_icon {
     display: block;
   }
+  
+  .close{
+    display:none
+  }
+  #check
   nav ul {
     position: absolute;
     top: 100%;
@@ -313,9 +323,11 @@ gap: 0px; */
 
 /* Footer section */
 
+/* Base styles */
 footer {
+  width: 100%;
+  height:266px;
   background-color: #000000;
-  height: fit-content;
   padding-bottom: 10px;
 }
 .footer_img {
@@ -323,7 +335,7 @@ footer {
   justify-content: center;
 }
 .footer_img img {
-  height: fit-content;
+  height: auto; 
   padding-top: 68px;
 }
 .line {
@@ -331,19 +343,39 @@ footer {
   margin-top: 40px;
 }
 .footer_line {
-  width: 1122.02px;
+  width:1122.02px;
+  max-width: 100%;
   height: 0px;
   border: 1px solid #5e5e5e;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 footer p {
-  width: 1122px;
-  height: 25px;
-  margin: 30px auto;
+  margin-top:30px;
+  max-width: 100%;
+  margin: 20px auto; 
+  padding: 0 10px; 
   font-family: "Poppins";
-  font-size: 14px;
+  font-size: 12px; 
   font-weight: 500;
-  line-height: 25px;
+  line-height: 20px; 
   text-align: center;
   color: #98a6ac;
+}
+
+/* Media queries for small devices */
+@media only screen and (max-width: 767px) {
+  footer {
+    padding-bottom: 5px; /* Adjust padding for smaller devices */
+  }
+  .footer_img img {
+    padding-top: 10px; /* Adjust padding for smaller devices */
+  }
+  .line {
+    margin-top: 10px; 
+  }
+  footer p {
+    font-size: 10px; /* Adjust font size for smaller devices */
+    line-height: 16px; /* Adjust line height for smaller devices */
+    margin: 10px auto; /* Adjust margin for smaller devices */
+  }
 }
